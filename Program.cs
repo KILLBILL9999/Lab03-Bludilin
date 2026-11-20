@@ -119,15 +119,38 @@
 
 
 
-int apples = 5;
-Console.WriteLine($"В корзине было: {apples++}"); // постфикс: в выражение уходит СТАРОЕ значение (5), переменная увеличивается после
-Console.WriteLine($"Теперь в корзине: {apples}"); // теперь 6
+// int apples = 5;
+// Console.WriteLine($"В корзине было: {apples++}"); // постфикс: в выражение уходит СТАРОЕ значение (5), переменная увеличивается после
+// Console.WriteLine($"Теперь в корзине: {apples}"); // теперь 6
 
-int oranges = 5;
-Console.WriteLine($"В ящике стало: {++oranges}"); // префикс: переменная увеличивается сразу, в выражение уходит НОВОЕ значение (6)
-Console.WriteLine($"Проверка: {oranges}");        // 6
+// int oranges = 5;
+// Console.WriteLine($"В ящике стало: {++oranges}"); // префикс: переменная увеличивается сразу, в выражение уходит НОВОЕ значение (6)
+// Console.WriteLine($"Проверка: {oranges}");        // 6
 
-int count = 10;
-int a = count++; // a получает старое значение 10, потом count становится 11
-int b = ++count; // count становится 12, и b получает уже новое значение
-Console.WriteLine($"a = {a}, b = {b}, count = {count}"); // a=10, b=12, count=12
+// int count = 10;
+// int a = count++; // a получает старое значение 10, потом count становится 11
+// int b = ++count; // count становится 12, и b получает уже новое значение
+// Console.WriteLine($"a = {a}, b = {b}, count = {count}"); // a=10, b=12, count=12
+
+
+
+Console.Write("Введите сумму покупки: ");
+double purchaseAmount = double.Parse(Console.ReadLine());
+
+Console.Write("Есть карта постоянного клиента? (1 - да, 0 - нет): ");
+string cardInput = Console.ReadLine();
+bool hasLoyaltyCard = (cardInput == "1");
+
+Console.Write("Введите количество товаров в чеке: ");
+int itemCount = int.Parse(Console.ReadLine());
+
+bool enoughAmount = purchaseAmount >= 3000;
+bool enoughItems = itemCount >= 3;
+bool eligibleForDiscount = (enoughAmount && enoughItems) || hasLoyaltyCard;
+
+Console.WriteLine();
+Console.WriteLine("Проверка условий");
+Console.WriteLine($"Сумма >= 3000: {enoughAmount}");
+Console.WriteLine($"Товаров >= 3: {enoughItems}");
+Console.WriteLine($"Карта постоянного клиента: {hasLoyaltyCard}");
+Console.WriteLine($"Скидка доступна: {eligibleForDiscount}");

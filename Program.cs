@@ -111,9 +111,23 @@
 
 
 
-Console.Write("Введите целое число: ");
-int number = int.Parse(Console.ReadLine());
+// Console.Write("Введите целое число: ");
+// int number = int.Parse(Console.ReadLine());
 
-bool isEven = number % 2 == 0;
-Console.WriteLine($"Число {number} чётное: {isEven}");
+// bool isEven = number % 2 == 0;
+// Console.WriteLine($"Число {number} чётное: {isEven}");
 
+
+
+int apples = 5;
+Console.WriteLine($"В корзине было: {apples++}"); // постфикс: в выражение уходит СТАРОЕ значение (5), переменная увеличивается после
+Console.WriteLine($"Теперь в корзине: {apples}"); // теперь 6
+
+int oranges = 5;
+Console.WriteLine($"В ящике стало: {++oranges}"); // префикс: переменная увеличивается сразу, в выражение уходит НОВОЕ значение (6)
+Console.WriteLine($"Проверка: {oranges}");        // 6
+
+int count = 10;
+int a = count++; // a получает старое значение 10, потом count становится 11
+int b = ++count; // count становится 12, и b получает уже новое значение
+Console.WriteLine($"a = {a}, b = {b}, count = {count}"); // a=10, b=12, count=12

@@ -13,15 +13,58 @@
 // balance /= 2;
 // Console.WriteLine($"После деления пополам: {balance}");
 
-int lessonNumber = 1;
-Console.WriteLine($"lessonNumber++ выводит: {lessonNumber++}");
-Console.WriteLine($"После этого lessonNumber = {lessonNumber}");
+// int lessonNumber = 1;
+// Console.WriteLine($"lessonNumber++ выводит: {lessonNumber++}");
+// Console.WriteLine($"После этого lessonNumber = {lessonNumber}");
 
-int weekNumber = 1;
-Console.WriteLine($"++weekNumber выводит: {++weekNumber}");
-Console.WriteLine($"После этого weekNumber = {weekNumber}");
+// int weekNumber = 1;
+// Console.WriteLine($"++weekNumber выводит: {++weekNumber}");
+// Console.WriteLine($"После этого weekNumber = {weekNumber}");
 
-int attempts = 0;
-Console.WriteLine($"Попытка №{++attempts}");
-Console.WriteLine($"Попытка №{++attempts}");
-Console.WriteLine($"Всего попыток: {attempts}");
+// int attempts = 0;
+// Console.WriteLine($"Попытка №{++attempts}");
+// Console.WriteLine($"Попытка №{++attempts}");
+// Console.WriteLine($"Всего попыток: {attempts}");
+
+
+double myGrade = 4.6;
+double passingGrade = 4.0;
+int myAge = 20;
+int votingAge = 18;
+
+bool isPassing = myGrade >= passingGrade;
+bool isExactAge = myAge == votingAge;
+bool canVote = myAge >= votingAge;
+bool isNotFailing = myGrade != 2.0;
+
+Console.WriteLine($"Балл {myGrade} >= {passingGrade}: {isPassing}");
+Console.WriteLine($"Возраст {myAge} == {votingAge}: {isExactAge}");
+Console.WriteLine($"Возраст {myAge} >= {votingAge} (может голосовать): {canVote}");
+Console.WriteLine($"Балл {myGrade} != 2.0 (не двойка): {isNotFailing}");
+
+
+bool hasPassingGrade = true;
+bool hasAttendance = false;
+bool hasDebt = true;
+
+bool canGetScholarship = hasPassingGrade && hasAttendance;
+bool canRetakeExam = hasPassingGrade || hasAttendance;
+bool isDebtFree = !hasDebt;
+
+Console.WriteLine($"Может получить стипендию (оценка И посещаемость): {canGetScholarship}");
+Console.WriteLine($"Может пересдать (оценка ИЛИ посещаемость): {canRetakeExam}");
+Console.WriteLine($"Нет долгов: {isDebtFree}");
+
+bool CheckAndPrint(string label, bool value)
+{
+    Console.WriteLine($"  Вычисляется: {label}");
+    return value;
+}
+
+Console.WriteLine("Проверяем && (первый операнд false):");
+bool resultAnd = CheckAndPrint("A", false) && CheckAndPrint("B", true);
+Console.WriteLine($"Результат: {resultAnd}");
+
+Console.WriteLine("Проверяем || (первый операнд true):");
+bool resultOr = CheckAndPrint("C", true) || CheckAndPrint("D", false);
+Console.WriteLine($"Результат: {resultOr}");

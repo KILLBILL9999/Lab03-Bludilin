@@ -72,39 +72,48 @@
 
 
 
-int resultNoParens = 2 + 3 * 4;
-int resultWithParens = (2 + 3) * 4;
-Console.WriteLine($"2 + 3 * 4 = {resultNoParens}");
-Console.WriteLine($"(2 + 3) * 4 = {resultWithParens}");
+// int resultNoParens = 2 + 3 * 4;
+// int resultWithParens = (2 + 3) * 4;
+// Console.WriteLine($"2 + 3 * 4 = {resultNoParens}");
+// Console.WriteLine($"(2 + 3) * 4 = {resultWithParens}");
 
-bool logicResult = 5 > 3 && 2 < 4 || false;
-bool logicResultParens = (5 > 3 && 2 < 4) || false;
-Console.WriteLine($"5>3 && 2<4 || false = {logicResult}");
-Console.WriteLine($"(5>3 && 2<4) || false = {logicResultParens}");
+// bool logicResult = 5 > 3 && 2 < 4 || false;
+// bool logicResultParens = (5 > 3 && 2 < 4) || false;
+// Console.WriteLine($"5>3 && 2<4 || false = {logicResult}");
+// Console.WriteLine($"(5>3 && 2<4) || false = {logicResultParens}");
 
 
 
-Console.Write("Введите средний балл аттестата: ");
-double averageGrade = double.Parse(Console.ReadLine());
+// Console.Write("Введите средний балл аттестата: ");
+// double averageGrade = double.Parse(Console.ReadLine());
 
-Console.Write("Введите баллы за экзамен (0-100): ");
-int examScore = int.Parse(Console.ReadLine());
+// Console.Write("Введите баллы за экзамен (0-100): ");
+// int examScore = int.Parse(Console.ReadLine());
 
-Console.Write("Есть льгота? (1 - да, 0 - нет): ");
-int benefitInput = int.Parse(Console.ReadLine());
-bool hasBenefit = (benefitInput == 1);
+// Console.Write("Есть льгота? (1 - да, 0 - нет): ");
+// int benefitInput = int.Parse(Console.ReadLine());
+// bool hasBenefit = (benefitInput == 1);
 
-bool hasGoodCertificate = averageGrade >= 4.0;
-bool hasGoodExam = examScore >= 60;
-bool isEligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
+// bool hasGoodCertificate = averageGrade >= 4.0;
+// bool hasGoodExam = examScore >= 60;
+// bool isEligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
 
-double totalScore = averageGrade * 10;
-totalScore += examScore;
+// double totalScore = averageGrade * 10;
+// totalScore += examScore;
 
-Console.WriteLine();
-Console.WriteLine("Результат");
-Console.WriteLine($"Хороший аттестат >= 4.0: {hasGoodCertificate}");
-Console.WriteLine($"Хороший экзамен >= 60: {hasGoodExam}");
-Console.WriteLine($"Льгота: {hasBenefit}");
-Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
-Console.WriteLine($"Итоговый балл: {totalScore}");
+// Console.WriteLine();
+// Console.WriteLine("Результат");
+// Console.WriteLine($"Хороший аттестат >= 4.0: {hasGoodCertificate}");
+// Console.WriteLine($"Хороший экзамен >= 60: {hasGoodExam}");
+// Console.WriteLine($"Льгота: {hasBenefit}");
+// Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
+// Console.WriteLine($"Итоговый балл: {totalScore}");
+
+
+
+Console.Write("Введите целое число: ");
+int number = int.Parse(Console.ReadLine());
+
+bool isEven = number % 2 == 0;
+Console.WriteLine($"Число {number} чётное: {isEven}");
+
